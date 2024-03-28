@@ -16,3 +16,6 @@ Currently, two official plugins are available:
 
 ![image](https://github.com/NarayanasamyP/pub-sub/assets/34939696/b356652e-80f2-416b-ad4b-c087f49fd78f)
 
+![image](https://github.com/NarayanasamyP/pub-sub/assets/34939696/cc138464-9075-493a-a59f-95f974b3316a)
+
+`Note:` for security reasons we have removed the `pubsub-test.json` file content. You can generate and replace the object. Also, kindly rename the `Topic, Subscription` based on your google cloud account configuration.
