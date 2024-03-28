@@ -1,0 +1,9 @@
+import express from 'express';
+// import formData from "express-form-data";
+const msgCreateRouter = express();
+import {createMessage}  from "../pubsub/controller/Publisher-Controller.js";
+
+msgCreateRouter.get("/", createMessage);
+msgCreateRouter.post("/create", createMessage);
+
+export default msgCreateRouter;
