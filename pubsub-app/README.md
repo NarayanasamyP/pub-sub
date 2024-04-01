@@ -1,11 +1,7 @@
-# React + Vite
+# React + Vite + Google Cloud
+This example project is for how to publish message to google cloud from the react appliaction using nodejs service.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+`Note: if you are running this example you should change the topic, subscription and access keys for based on your account.`
 
 # To Run the client side connection to the google cloud pub sub.
 - Open three terminal windows.
