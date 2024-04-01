@@ -8,14 +8,19 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 # To Run the client side connection to the google cloud pub sub.
-- Open two terminal windows.
-- `run` 'node src/service/service.js' in terminal 1
-- `run`  'node src/service/createservice.js' in terminal 2
-![image](https://github.com/NarayanasamyP/pub-sub/assets/34939696/5413654f-85a4-416f-b231-7a887606677f)
+- Open three terminal windows.
+- `run` 'npm run dev' in terminal 1 for UI
+- `run` 'node src/service/createservice.js' in terminal 2
+- `run`  'node src/service/pullservice.js' in terminal 3
 
+UI
+![image](https://github.com/NarayanasamyP/pub-sub/assets/34939696/75e5f7ef-d36e-4851-aff8-38f3fad01c40)
 
-![image](https://github.com/NarayanasamyP/pub-sub/assets/34939696/b356652e-80f2-416b-ad4b-c087f49fd78f)
+GC:
+![image](https://github.com/NarayanasamyP/pub-sub/assets/34939696/8bfc2029-afbb-4b72-a6ae-57131cc0f551)
 
-![image](https://github.com/NarayanasamyP/pub-sub/assets/34939696/cc138464-9075-493a-a59f-95f974b3316a)
+Response of pull:
+![image](https://github.com/NarayanasamyP/pub-sub/assets/34939696/1e17a324-0378-412b-b134-c4b607d17c53)
+
 
 `Note:` for security reasons we have removed the `pubsub-test.json` file content. You can generate and replace the object. Also, kindly rename the `Topic, Subscription` based on your google cloud account configuration.
