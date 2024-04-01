@@ -2,8 +2,8 @@ import { PubSub  } from "@google-cloud/pubsub";
 const pubSubClient = new PubSub();
 const subscriptionName = "MySub";
 const timeout = 60;
-import pubsubRepository from "../repositories/pub-sub-repo";
-const { listenForPullMessages, listenForPushMessages } = pubsubRepository;
+import {listenForPullMessages, listenForPushMessages} from "../../repositories/pub-sub-repo.js";
+// const { listenForPullMessages, listenForPushMessages } = pubsubRepository;
 // module.exports = {
     export function pullDelivery (req, res) {
         try {

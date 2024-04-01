@@ -18,6 +18,7 @@ export async function createMessage (req, res) {
         let messageId = await publishMessage(pubSubClient, topicName, ordersObj);
         return res.status(200).json({
             success: true,
-            message: `Message ${messageId} published :)`
+            message: `Message ${messageId} published :)`,
+            payload: req.body
         })
     }

@@ -1,37 +1,41 @@
 import axios from 'axios'
+import { useState } from 'react';
 import './App.css'
-// import { PORT_1, NODE_ENV } from '';
 
 function App() {
-  const handlePublish=async()=>{
-  // your code here.
+  const [message, setMessage] = useState('');
+
+  const handlePublish=(e)=>{
+    e.preventDefault();
+    axios.post('http://localhost:8003/api/pull')
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.error(error);
+    });
   }
-  const handleSubscribe=()=>{
-    // your code here.
+  const handleSubscribe=(e)=>{
+    e.preventDefault();
   }
   const handleCreate= (e)=>{
     e.preventDefault();
-    debugger;
- axios.post(`http://localhost:${8002}`, {
-  key: 'value',
-})
+ axios.post('http://localhost:8002/api/create',{"message":message})
 .then(function (response) {
   console.log(response.data);
 })
 .catch(function (error) {
   console.error(error);
 });
-    // your code here.
-    // axios.post('http://localhost:8001/api/create',{"message": "2 world!"}).then(dat => console.log(dat));
     }
   return (
     <div className="App">
-      <form onSubmit={(e)=>handleCreate(e)}>
-      <input type='text' placeholder='enter the message to send' />
-      <button type='submit'> Create </button>      
-      <button onClick={()=>handlePublish
-      ()}> Publish </button>
-      <button onClick={handleSubscribe}> Subscribe </button>   
+      <form>
+      <input className='custom-txt' type='text' onChange={(e)=>setMessage(e.target.value)} value={message} placeholder='enter the message to send' />
+      <button onClick={(e)=>handleCreate(e)}> Create </button>      
+      <button onClick={(e)=>handlePublish
+      (e)}> Publish </button>
+      {/* <button onClick={(e)=>handleSubscribe(e)}> Subscribe </button>    */}
       </form>   
     </div>
   );

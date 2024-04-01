@@ -21,5 +21,5 @@ app.use('/api/get', ordersRoute);
 
 app.listen(MAIN_PORT);
 if (NODE_ENV !== "production" ) {
-    console.log(`Orders service is running at http://localhost:${MAIN_PORT}`);
+    console.log(`Get messages service is running at http://localhost:${MAIN_PORT}`);
 }
