@@ -20,3 +20,5 @@ Response of pull:
 
 
 `Note:` for security reasons we have removed the `pubsub-test.json` file content. You can generate and replace the object. Also, kindly rename the `Topic, Subscription` based on your google cloud account configuration.
+
+[Getting started with GC Pub/Sub](getting-started.docx)
